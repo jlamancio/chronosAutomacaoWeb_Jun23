@@ -1,4 +1,4 @@
-package br.com.chronosacademy.ecommerce;
+package br.com.chronosacademy.ecommerce.tests;
 
 import br.com.chronosacademy.ecommerce.core.Driver;
 import br.com.chronosacademy.ecommerce.pages.CursoPage;
@@ -37,8 +37,8 @@ public class TestWebEc {
     public void segundoTeste() {
         cursoPage = new CursoPage(driver);
         principalPage.clickBotao();
-        String titulo = cursoPage.getTitulo2();
-        Assert.assertEquals("Conheça todos os nossos cursos.", titulo);
+        String h2titulo = cursoPage.getTitulo2();
+        Assert.assertEquals("Conheça todos os nossos cursos.", h2titulo);
 
     }
 
