@@ -3,7 +3,7 @@ Funcionalidade: Login na pagina - advantageonlineshopping
 
   Contexto:
     Dado que a modal esteja sendo exibida
-
+ @fecharModal
   Cenario: Fechar a modal ao clicar fora da mesma
     Quando for realizado clique fora da modal
     Então a janela modal deve ser fechada
