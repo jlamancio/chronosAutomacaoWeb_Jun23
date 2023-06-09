@@ -1,7 +1,9 @@
 package br.com.chronosacademy.ecommerce.steps;
 
 import br.com.chronosacademy.ecommerce.core.Driver;
+import br.com.chronosacademy.ecommerce.enums.Browser;
 import br.com.chronosacademy.ecommerce.pages.LoginPage;
+import br.com.chronosacademy.ecommerce.pages.NewAccountPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.pt.Dado;
@@ -16,7 +18,7 @@ public class LoginSteps {
     LoginPage loginPage;
     @Before
     public void iniciarNavegador(){
-        new Driver("chrome");
+        new Driver(Browser.CHROME);
     }
     @After
     public void fecharNavegador(){
@@ -28,7 +30,8 @@ public class LoginSteps {
         Driver.getDriver().get("https://www.advantageonlineshopping.com");
         loginPage = new LoginPage();
         loginPage.clickBtnlogin();
-
+        loginPage.visibilityOfBtnFechar();
+        loginPage.aguardarLoader();
     }
 
     @Quando("for realizado clique fora da modal")
@@ -57,7 +60,8 @@ public class LoginSteps {
 
     @Então("a pagina Create New Account deve ser exibida.")
     public void aPaginaCreateNewAccountDeveSerExibida() {
-
+       NewAccountPage newAccountPage = new NewAccountPage();
+       Assert.assertEquals("CREATE ACCOUNT", newAccountPage.getTextNewAccount());
     }
 
     @Quando("os campos de login sejam preenchidos da seguinte forma")

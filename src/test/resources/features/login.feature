@@ -7,11 +7,11 @@ Funcionalidade: Login na pagina - advantageonlineshopping
   Cenario: Fechar a modal ao clicar fora da mesma
     Quando for realizado clique fora da modal
     Então a janela modal deve ser fechada
-
+  @fecharModalIcone
   Cenario: Fechar a modal ao clicar no icone
     Quando for realizado un clique no icone de fechar modal
     Então a janela modal deve ser fechada
-
+  @createNewAccount
   Cenario: Link Create New Account
     Quando for realizado um clique no link Create New Account
     Então a pagina Create New Account deve ser exibida.
@@ -45,7 +45,7 @@ Funcionalidade: Login na pagina - advantageonlineshopping
       | usuario invalido | invalido | senha    | false    |
       | senha invalida   | chronos  | invalida | false    |
 
-
+  @dadosEmBranco
   Esquema do Cenario: Realizar login com <identificacao>
 
     Quando os campos de login sejam preenchidos da seguinte forma

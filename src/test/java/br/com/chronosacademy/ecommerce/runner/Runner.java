@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        tags = "@fecharModal",
+        tags = "@dadosEmBranco",
         glue = "br.com.chronosacademy.ecommerce.steps",
         plugin = {"json:target/reports/cucumberReportsEcommerce.json", "pretty"},
         snippets = CucumberOptions.SnippetType.CAMELCASE

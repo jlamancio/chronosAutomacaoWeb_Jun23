@@ -8,61 +8,62 @@ public class LoginPage {
 
     LoginMap loginMap;
 
-    public LoginPage(){
+    public LoginPage() {
         loginMap = new LoginMap();
         PageFactory.initElements(Driver.getDriver(), loginMap);
     }
 
-    public void clickBtnlogin(){
+    public void clickBtnlogin() {
         Driver.visibilityOf(loginMap.btnLogin);
         loginMap.btnLogin.click();
     }
 
-    public void clickBtnFechar(){
+    public void clickBtnFechar() {
         loginMap.btnFechar.click();
     }
 
-    public void clickDivFecharModal(){
+    public void clickDivFecharModal() {
         loginMap.divFecharModal.click();
     }
 
-    public void setInpUserName(String username){
-        loginMap.inpUserName.sendKeys(username);
+    public void setInpUserName(String username) {
+        if (username != null) {
+            loginMap.inpUserName.sendKeys(username);
+        }
     }
 
-    public void setInpPassword(String password){
-        loginMap.inpPassword.sendKeys(password);
+    public void setInpPassword(String password) {
+        if (password != null) {
+            loginMap.inpPassword.sendKeys(password);
+        }
     }
 
-    public void clickInpRemember(){
+    public void clickInpRemember() {
         loginMap.inpRemember.click();
     }
 
-    public void clicklinkCreateAccount(){
+    public void clicklinkCreateAccount() {
         loginMap.linkCreateAccount.click();
     }
 
-    public void clicBtnSingIn(){
+    public void clicBtnSingIn() {
         loginMap.btnSignIn.click();
     }
 
-    public boolean isBtnSingIN(){
+    public boolean isBtnSingIN() {
         return loginMap.btnSignIn.isEnabled();
     }
 
-    public void visibilityOfBtnFechar(){
+    public void visibilityOfBtnFechar() {
         Driver.visibilityOf(loginMap.btnFechar);
     }
 
-    public void invisibilityOfBtnFechar(){
+    public void invisibilityOfBtnFechar() {
         Driver.invisibilityOf(loginMap.btnFechar);
     }
 
-
-
-
-
-
-
+    public void aguardarLoader() {
+        Driver.attributeChange(loginMap.divLoader, "display", "none");
+    }
 
 }
