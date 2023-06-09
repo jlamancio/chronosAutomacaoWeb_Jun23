@@ -1,6 +1,7 @@
 package br.com.chronosacademy.ecommerce.tests;
 
 import br.com.chronosacademy.ecommerce.core.Driver;
+import br.com.chronosacademy.ecommerce.enums.Browser;
 import br.com.chronosacademy.ecommerce.pages.CursoPage;
 import br.com.chronosacademy.ecommerce.pages.PrincipalPage;
 import org.junit.After;
@@ -19,7 +20,7 @@ public class TestWebEc {
 
     @Before
     public void inicializarTest() {
-        driverweb = new Driver("chrome");
+        driverweb = new Driver(Browser.CHROME);
         driver = driverweb.getDriver();
         driver.get("https://chronosacademy.com.br");
         principalPage = new PrincipalPage(driver);
