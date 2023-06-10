@@ -33,7 +33,7 @@ Funcionalidade: Login na pagina - advantageonlineshopping
     Exemplos:
       | identificacao          | login   | password | remember |
       | os campos obrigatorios | chronos | Senha123 | false    |
-      | todos os campos        | chronos | true     | true     |
+      | todos os campos        | chronos | Senha123 | true     |
 
   @loginComDadosInvalidos
   Esquema do Cenario: Realizar login com <identificacao>

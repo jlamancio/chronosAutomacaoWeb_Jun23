@@ -93,7 +93,7 @@ public class LoginSteps {
 
     @Então("o sistema devera exibir uma mensagem de erro")
     public void oSistemaDeveraExibirUmaMensagemDeErro() {
-
+        Assert.assertEquals("Incorrect user name or password.", loginPage.getErrorLogin());
     }
 
     @Então("o botao Singin devera permanecer desabiitado")
