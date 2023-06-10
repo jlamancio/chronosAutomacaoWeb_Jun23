@@ -3,7 +3,8 @@ package br.com.chronosacademy.ecommerce.maps;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginMap {
+public class
+LoginMap {
     @FindBy(css = "#menuUser")          // '#' = id
     public WebElement btnLogin;
     @FindBy(css = ".closeBtn")          // '.' = class
@@ -24,4 +25,6 @@ public class LoginMap {
     public WebElement divLoader;
     @FindBy(css = ".containMiniTitle ")
     public WebElement textLogado;
+    @FindBy(xpath = "//label[contains(text(),'incorrect')]")
+    public WebElement txtErrorLogin;
 }

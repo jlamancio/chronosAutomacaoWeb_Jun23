@@ -70,5 +70,9 @@ public class LoginPage {
         Driver.visibilityOf(loginMap.textLogado);
         return loginMap.textLogado.getText();
     }
+    public String getErrorLogin(){
+        Driver.visibilityOf(loginMap.txtErrorLogin);
+        return loginMap.txtErrorLogin.getText();
+    }
 
 }
