@@ -1,5 +1,5 @@
 #language:pt
-@Login
+@login
 Funcionalidade: Login na pagina - advantageonlineshopping
 
   Contexto:
